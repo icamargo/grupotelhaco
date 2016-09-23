@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta charset="utf-8"></meta>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <title>Pedido</title>
+        <link rel="icon" href="../recursos/imagens/logo.jpg"></link>
+        <link rel="stylesheet" href="../recursos/css/bootstrap.css"></link>
+        <link href="../recursos/css/theme.css" rel="stylesheet"></link>
+        <link rel="stylesheet" href="../recursos/css/ie10-viewport-bug-workaround.css"></link>
+    </h:head>
+    
+    <h:body style="background-color: #707070">
+        <center>
+            <h:form id="formAtt">
+                <div class="panel panel-primary" style="width: 100%">
+                    <div class="panel-heading">
+                        <h4>Pedido 12312</h4>
+                    </div>
+                        <div class="panel-body">
+                            <h:panelGrid width="100%" columns="1">
+                                <p:outputLabel value="Parceiro: + NomeCliente"/>
+                                
+                                <p:outputLabel value="Status: + Status"/>
+                                
+                            </h:panelGrid>
+                            
+                        </div>
+                    </div>
+                <div class="panel panel-primary" style="width: 100%">
+                    <div class="panel-heading">
+                        <h4>
+                            Itens do Pedido
+                        </h4>
+                        <div class="panel-body">
+                            <p:dataTable value="" var="item" id="tabelaItens">
+                                <p:column style="width: 70%">
+                                    <f:facet name="header">
+                                        Produto
+                                    </f:facet>
+                                    <h:outputText value="valor 2" />
+                                </p:column>
+                                <p:column style="width: 30%">
+                                    <f:facet name="header">
+                                        Qtd.
+                                    </f:facet>
+                                    <h:outputText value="valor 2" />
+                                </p:column>
+                            </p:dataTable>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-primary" style="width: 100%">
+                    <div class="panel-heading">
+                        <h4>
+                            Metragens do Item
+                        </h4>
+                        
+                        <h:panelGrid width="100%" style="text-align: center">
+                            <p:outputLabel value="Telha AZ150 0,43" style="color: #000"/>
+                        </h:panelGrid>
+                        
+                        <div class="panel-body">
+                            <p:dataTable value="" var="metragem" id="tabelaMetragens">
+                                <p:column>
+                                    <f:facet name="header">
+                                        Quantidade
+                                    </f:facet>
+                                    <h:outputText value="valor 2" />
+                                </p:column>
+                                <p:column>
+                                    <f:facet name="header">
+                                        Comprimento
+                                    </f:facet>
+                                    <h:outputText value="valor 2" />
+                                </p:column>
+                            </p:dataTable>
+                        </div>
+                    </div>
+                </div>
+                <p:commandButton value="Aprovar/Reprovar" class="btn btn-danger">
+                    <p:confirm header="Atualização" message="Confirma Modificações?" icon="ui-icon-alert"/>
+                </p:commandButton>
+                        
+                <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                    <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+                    <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+                </p:confirmDialog>
+                
+            </h:form>
+        </center>
+    </h:body>
+</html>
